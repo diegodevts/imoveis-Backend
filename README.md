@@ -3,11 +3,11 @@
 ******************************************************************************************************************************************
 Feito em typescript + libs, que são:
 ******************************************************************************************************************************************
-Express para backend
-JWT para gerar token
-typeorm pra criar entidades e salvar usuário e endereço no banco
-bcrypt pra encriptar senhas
-Para rodar o projeto basta digitar os comandos:
+-Express para backend
+-JWT para gerar token
+-typeorm pra criar entidades e salvar usuário e endereço no banco
+-bcrypt pra encriptar senhas
+#Para rodar o projeto basta digitar os comandos:
 
 npm run typeorm migration:run
 npm run dev
@@ -15,9 +15,9 @@ npm run dev
 ******************************************************************************************************************************************
 #Endpoints
 ******************************************************************************************************************************************
-CRUD de usuário:
+#CRUD de usuário:
 
-Cadastro (create), rota post /user
+#Cadastro (create), rota post /user
 ******************************************************************************************************************************************
   Digita os dados pedidos:
 
@@ -46,7 +46,7 @@ e Recebe esse endpoint:
 }
 
 ******************************************************************************************************************************************
-  Listagem de todos os usuários (Read), rota get /user
+  #Listagem de todos os usuários (Read), rota get /user
 ******************************************************************************************************************************************
   endpoint:
   
@@ -63,7 +63,7 @@ e Recebe esse endpoint:
 ]
 
 ******************************************************************************************************************************************
-  Listagem de um usuário apenas (Read/:id), rota get /user/:id
+  #Listagem de um usuário apenas (Read/:id), rota get /user/:id
 ******************************************************************************************************************************************
 
 endpoint:(Obs:. Necessário passar o id como parâmetro)
@@ -79,7 +79,7 @@ endpoint:(Obs:. Necessário passar o id como parâmetro)
 }
 
 ******************************************************************************************************************************************
-  Atualização de usuário (Update/:id), rota put /user/:id
+  #Atualização de usuário (Update/:id), rota put /user/:id
 ******************************************************************************************************************************************
   endpoints:(É passado também umm id como parâmetro)
   
@@ -96,7 +96,7 @@ endpoint:(Obs:. Necessário passar o id como parâmetro)
     }
    
 ******************************************************************************************************************************************
-   Deleção de usuário (Delete/:id), rota delete /user/:id
+   #Deleção de usuário (Delete/:id), rota delete /user/:id
 ******************************************************************************************************************************************
   endpoints:(É passado também umm id como parâmetro)
   
@@ -104,7 +104,7 @@ endpoint:(Obs:. Necessário passar o id como parâmetro)
      "message": "Usuario excluido!"
     }
 ******************************************************************************************************************************************
-  Login (Create) rota post /session
+  #Login (Create) rota post /session
 ******************************************************************************************************************************************
   Você loga com email e senha:
   
@@ -130,7 +130,7 @@ endpoint:(Obs:. Necessário passar o id como parâmetro)
       }
       
 ******************************************************************************************************************************************
-    Verificar token (Read+Bearer) get /session/+BearerToken
+    #Verificar token (Read+Bearer) get /session/+BearerToken
 ******************************************************************************************************************************************
     Você pega o token do login, e o valida com o Bearer token
     
@@ -144,11 +144,11 @@ endpoint:(Obs:. Necessário passar o id como parâmetro)
 
 #Observações:
 
-o CRUD  de imóveis funciona da mesma forma(com excessão da verificação do token pelo bearer, e o login), exceto esses endpoints:
+#o CRUD  de imóveis funciona da mesma forma(com excessão da verificação do token pelo bearer, e o login), exceto esses endpoints:
 
 ******************************************************************************************************************************************
 
-1 - Primeiro você cadastra o imóvel, e no campo "user" você coloca o id do usuário referente àquele imóvel.
+#1 - Primeiro você cadastra o imóvel, e no campo "user" você coloca o id do usuário referente àquele imóvel.
 ******************************************************************************************************************************************
   Adicionar imóvel (Create), rota post /imoveis
 
@@ -162,7 +162,7 @@ o CRUD  de imóveis funciona da mesma forma(com excessão da verificação do to
 	"user": "3208fb5d-7d88-4051-8f3f-e5192d854916"
 }
 ******************************************************************************************************************************************
-1.1 - Depois recebe a mensagem de sucesso ou falha (no exemplo, sucesso novamente)
+#1.1 - Depois recebe a mensagem de sucesso ou falha (no exemplo, sucesso novamente)
 ******************************************************************************************************************************************
   {
   "imoveis": {
@@ -181,10 +181,10 @@ o CRUD  de imóveis funciona da mesma forma(com excessão da verificação do to
   }
   
 ******************************************************************************************************************************************
- 2- Listar imóveis com usuários (Read), rota get /imoveis
+ #2- Listar imóveis com usuários (Read), rota get /imoveis
     
     endpoint:
-    [
+ [
   {
     "id": "c4b9eea5-e981-4237-9a20-f1ed03307a3a",
     "cep": 40760373,
